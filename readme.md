@@ -3,7 +3,7 @@
 Its a simple library granting access to bitcoind core RPC with simple php methods and auto complete for IDEs
 
 The logic is separated into 3 different departments:
- - Wallets
+ - Wallet
  - Transactions
  - Blockchain
 
