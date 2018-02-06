@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+    bitcoind:
+        image: ruimarinho/bitcoin-core:0.15.0.1-alpine
+        container_name: bitcoind
+        volumes:
+          - "./data/bitcoin:/home/bitcoin/.bitcoin"
+        command:
+          -printtoconsole
+          -regtest=1
+          -rpcallowip=10.211.0.0/16
+          -rpcallowip=172.17.0.0/16
+          -rpcallowip=192.168.0.0/16
+          -rpcallowip=0.0.0.0/0
+          -rpcuser=foo
+          -rpcpassword=bar
+          -rpcport=18333
+          -server
+        ports:
+          - 18333:18333
+        restart: always
