@@ -1,6 +1,5 @@
 <?php
 namespace BitcoinWrapper;
-use Symfony\Component\VarDumper\VarDumper;
 
 require "../vendor/autoload.php";
 
@@ -11,5 +10,8 @@ $bc = new BitcoindClient(
     18333
 );
 
-$result = $bc->wallet->getAccountAddress("");
-VarDumper::dump(json_decode($result));
+$result = $bc->wallet->getWalletInfo();
+print_r($result);
+
+$result2 = $bc->block->getBlockChainInfo();
+print_r($result2);

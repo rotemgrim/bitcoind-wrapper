@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BitcoinWrapper\\": "src/"
+            "BitcoinWrapper\\": "src/BitcoinWrapper/"
         }
     },
     "autoload-dev": {
